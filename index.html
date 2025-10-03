@@ -235,6 +235,20 @@
   <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
 </div>
 
+<script>
+  const music = document.getElementById('music');
+  const slider = document.getElementById('volume-slider');
+
+  // ضبط الصوت الابتدائي
+  music.volume = slider.value;
+
+  // ربط السلايدر مع الصوت
+  slider.addEventListener('input', () => {
+    music.volume = slider.value;
+  });
+</script>
+
+
   <!-- Custom Alert -->
   <div id="custom-alert">
     <h1>Warning</h1>
